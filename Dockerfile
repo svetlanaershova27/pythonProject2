@@ -4,8 +4,7 @@ RUN apt install git -y
 RUN apt install default-jdk -y
 RUN apt install tomcat9 -y
 RUN apt install maven -y
-RUN mkdir home
-RUN cd /home
+RUN cd /home/
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 RUN cd  /home/boxfuse-sample-java-war-hello
 RUN mvn package
