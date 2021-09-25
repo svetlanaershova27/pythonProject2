@@ -5,7 +5,7 @@ RUN apt install tomcat9 -y
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 FROM maven:3.6-jdk-11 as build
 WORKDIR /boxfuse-sample-java-war-hello
-COPY src .
+COPY src ./src
 COPY pom.xml .
 RUN mvn -f /boxfuse-sample-java-war-hello/pom.xml clean package && rm -r target/
 FROM openjdk:11.0-jre
